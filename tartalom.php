@@ -16,6 +16,9 @@ switch ($menu) {
     case 'home':
         require_once './pages/home.php';
         break;
+    case 'body':
+        require_once './pages/body.php';
+        break;
     case 'kutya':
         require_once './pages/kutya.php';
         break;
