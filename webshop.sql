@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 07. 11:21
+-- Létrehozás ideje: 2023. Dec 23. 12:33
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -39,7 +39,16 @@ CREATE TABLE `cica_termekek` (
 --
 
 INSERT INTO `cica_termekek` (`ctermekid`, `ctermeknev`, `ctermekdarab`, `ctermekar`) VALUES
-(1, 'cica kék szoknya', '10', '10000');
+(1, 'cica kék szoknya', '10', '10000'),
+(2, 'mikulás jelmez', '10', '12000'),
+(3, 'pizzas macska pulover', '10', '5000'),
+(4, 'macska kendo', '10', '2000'),
+(5, 'macska hám', '10', '5000'),
+(6, 'fekete sárga macska pulóver', '10', '5000'),
+(7, 'lila macska pulóver', '10', '5000'),
+(8, 'barna macska pulóver', '10', '5000'),
+(9, 'rózsaszín macska pulóver', '10', '5000'),
+(10, 'kék rózsaszín macska pulóver', '10', '5000');
 
 -- --------------------------------------------------------
 
@@ -59,43 +68,9 @@ CREATE TABLE `kutya_termekek` (
 --
 
 INSERT INTO `kutya_termekek` (`ktermekid`, `ktermeknev`, `ktermekdarab`, `ktermekar`) VALUES
-(1, 'Best friends-es polo', '10', '5000');
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `rendeles`
---
-
-CREATE TABLE `rendeles` (
-  `userid` int(10) UNSIGNED NOT NULL,
-  `ctermekid` int(10) UNSIGNED NOT NULL,
-  `ktermekid` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `termekek`
---
-
-CREATE TABLE `termekek` (
-  `termekid` int(10) UNSIGNED NOT NULL,
-  `termeknev` varchar(100) NOT NULL,
-  `termekdarab` varchar(100) NOT NULL,
-  `termekar` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `termekek`
---
-
-INSERT INTO `termekek` (`termekid`, `termeknev`, `termekdarab`, `termekar`) VALUES
 (1, 'Best friends-es polo', '10', '5000'),
-(2, 'cica kék szoknya', '10', '10000'),
-(3, 'mikulás jelmez', '10', '12000'),
-(4, 'nagytestu kutyahám', '10', '16000'),
-(5, 'kék kutya kabát', '10', '15000'),
+(2, 'nagytestű kutya hám barna', '10', '16000'),
+(3, 'kék kutya kabát', '10', '15000'),
 (6, 'barna kutya kabat', '10', '11000'),
 (7, 'piros kutya kabát', '10', '13000'),
 (8, 'világos barna kutya kabát', '10', '14000'),
@@ -110,18 +85,24 @@ INSERT INTO `termekek` (`termekid`, `termeknev`, `termekdarab`, `termekar`) VALU
 (17, 'kistestü kutya hám rózsaszín', '10', '7000'),
 (18, 'kistestű kutya hám barna', '10', '4000'),
 (19, 'kistestű kutya hám piros', '10', '5000'),
-(20, 'nagytestű kutya hám barna', '10', '10000'),
-(21, 'nagytestű kutya hám piros', '10', '11000'),
-(22, 'nagytestű kutya hám terepmintás', '10', '10000'),
-(23, 'kutya pulcsi lila', '10', '5000'),
-(24, 'kutya pulcsi piros', '10', '4000'),
-(25, 'kutya pulover sarga kek', '10', '3500'),
-(26, 'kötött kutya pulover', '10', '4000'),
-(27, 'kutya szoknya feher ', '10', '5000'),
-(28, 'kutya pulover kacsas', '10', '3000'),
-(29, 'pizzas macska pulover', '10', '5000'),
-(30, 'macska kendo', '10', '2000'),
-(31, 'kutya szoknya fekete es piros', '10', '6000');
+(20, 'nagytestű kutya hám piros', '10', '10000'),
+(21, 'nagytestű kutya hám terepmintás', '10', '10000'),
+(22, 'kutya szoknya feher ', '10', '5000'),
+(23, 'kutya pulover kacsas', '10', '5000'),
+(24, 'kutya szoknya fekete es piros ', '10', '5000'),
+(25, 'piros kutya pulóver', '10', '5000');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `rendeles`
+--
+
+CREATE TABLE `rendeles` (
+  `userid` int(10) UNSIGNED NOT NULL,
+  `ctermekid` int(10) UNSIGNED NOT NULL,
+  `ktermekid` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 -- --------------------------------------------------------
 
@@ -169,12 +150,6 @@ ALTER TABLE `rendeles`
   ADD UNIQUE KEY `ktermekid` (`ktermekid`);
 
 --
--- A tábla indexei `termekek`
---
-ALTER TABLE `termekek`
-  ADD PRIMARY KEY (`termekid`);
-
---
 -- A tábla indexei `users`
 --
 ALTER TABLE `users`
@@ -188,19 +163,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `cica_termekek`
 --
 ALTER TABLE `cica_termekek`
-  MODIFY `ctermekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ctermekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT a táblához `kutya_termekek`
 --
 ALTER TABLE `kutya_termekek`
-  MODIFY `ktermekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT a táblához `termekek`
---
-ALTER TABLE `termekek`
-  MODIFY `termekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `ktermekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT a táblához `users`
