@@ -37,9 +37,9 @@ class Database {
 
     /* email ellenörző @ */
 
-    public function regist($email, $username, $pass) {
-        $stmt = $this->db->prepare("INSERT INTO `users`(`userid`, `email`, `username`, `password`) VALUES (NULL,?,?,?)");
-        $stmt->bind_param("sss", $email, $username, $pass);
+    public function regist($username, $email, $pass) {
+        $stmt = $this->db->prepare("INSERT INTO `users`(`userid`, `username`, `email`, `password`) VALUES (NULL,?,?,?)");
+        $stmt->bind_param("sss", $username, $email, $pass);
 
         try {
             if ($stmt->execute()) {
@@ -59,21 +59,5 @@ class Database {
     public function KutyaTermek() {
         $result = $this->db->query("SELECT * FROM `kutya_termekek`");
         return $result->fetch_all(MYSQLI_ASSOC);
-    }
-
-    public function getKivalasztottTV($id) {
-        $result = $this->db->query("SELECT * FROM `termekek` WHERE `termekid` = " . $id);
-        return $result->fetch_assoc();
-    }
-
-    public function setKivalasztottTV($termek_nev, $felbontas, $kepatlo, $termek_ar) {
-        $stmt = $this->db->prepare("Insert `termekek`(`termek_nev`,`felbontas`,`kepatlo`,`termek_ar`) Values (?, ?, ?, ? )");
-        $stmt->bind_param('ssss', $termek_nev, $felbontas, $kepatlo, $termek_ar);
-        $request = $stmt->execute();
-        if($request){
-            return true;
-        } else {
-            return false;
-        } 
     }
 }

@@ -5,6 +5,7 @@ $(function () {
     });
 });
 
+
 function kereses() {
     ker = document.getElementById("keres").innerHTML;
     eval(ker);
@@ -14,7 +15,7 @@ var myCarousel = document.querySelector('#myCarousel');
 var carousel = new bootstrap.Carousel(myCarousel, {
     interval: 2000,
     wrap: false
-})
+});
 
 $('.search').addClass('active');
 $('.overlay').removeClass('hidden');
@@ -26,4 +27,12 @@ $('.overlay').click(function () {
     $(this).addClass('hidden');
 });
 
-/*Kutya mozgókép*/
+/*Kutya kosar
+document.querySelectorAll('.cart button');
+cartButton.forEach(button=>{
+    button.addEventListener('click', cartClick);
+});
+function cartclick(){
+let button = this;button.classList.add('cliked');
+}*/
+

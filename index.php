@@ -9,7 +9,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 require_once './layout/head.php';
-$menu = filter_input(INPUT_GET, "menu");
+$menu = filter_input(INPUT_GET, "menu", FILTER_SANITIZE_SPECIAL_CHARS);
 ?>
 
 <html>

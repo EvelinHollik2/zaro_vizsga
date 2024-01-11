@@ -2,9 +2,9 @@
 if (filter_input(INPUT_POST, 'regisztraciosAdatok', FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE)) {
     $pass1 = filter_input(INPUT_POST, "password");
     $pass2 = filter_input(INPUT_POST, "password2");
-    $name = htmlspecialchars(filter_input(INPUT_POST, 'name'));
+    $username = htmlspecialchars(filter_input(INPUT_POST, 'username'));
     $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
-    $db->register($name, $email, $pass1);
+    $db->regist($username, $email, $pass1);
     if ($pass1 == $pass2) {
         echo 'Jó';
     } else {
@@ -21,7 +21,7 @@ if (filter_input(INPUT_POST, 'regisztraciosAdatok', FILTER_VALIDATE_BOOLEAN, FIL
                 REGISZTRÁCIÓ
             </h1>
             <div class='puppy'>
-                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png'>
+                <img src='./Kepek/regist/puppy.png'>
 
             </div>
         </div>
@@ -36,8 +36,8 @@ if (filter_input(INPUT_POST, 'regisztraciosAdatok', FILTER_VALIDATE_BOOLEAN, FIL
                             </div>
                             <br>
                             <div class="mb-3">
-                                <label for="name" class="form-label">Felhasználó név:</label>
-                                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+                                <label for="username" class="form-label">Felhasználó név:</label>
+                                <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
                             </div>
                             <br>
                             <div class="mb-3">
@@ -50,7 +50,7 @@ if (filter_input(INPUT_POST, 'regisztraciosAdatok', FILTER_VALIDATE_BOOLEAN, FIL
                                 <input type="password" class="form-control" id="password2" name="password2">
                             </div>
                             <br>
-                            <button type="submit" class="btn" name="regisztraciosAdatok" value="true">Regisztráció</button>
+                            <button type="submit" class="btn1" name="regisztraciosAdatok" value="true">Regisztráció</button>
                         </form>
                         <a href="index.php?oldalneve=bejelentkezes">Bejelentkezés</a>
                     </div>

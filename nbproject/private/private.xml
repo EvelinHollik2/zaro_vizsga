@@ -3,15 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/pages/kutyavendeg.php</file>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/layout/menu.php</file>
             <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/css/Web.css</file>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/index.php</file>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/pages/macskavendeg.php</file>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/pages/maincontent.php</file>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/pages/home.php</file>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/pages/regisztracio.php</file>
-            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/tartalom.php</file>
+            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/pages/kosar.php</file>
+            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/pages/kutya.php</file>
+            <file>file:/C:/xampp/htdocs/ZaroVizsga_kutyamacska/js/vegyes.js</file>
         </group>
     </open-files>
 </project-private>

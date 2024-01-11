@@ -13,9 +13,6 @@ switch ($menu) {
     case 'regisztracio':
         require_once './pages/regisztracio.php';
         break;
-    case 'home':
-        require_once './pages/home.php';
-        break;
     case 'body':
         require_once './pages/body.php';
         break;
@@ -31,10 +28,13 @@ switch ($menu) {
     case 'macskavendeg':
         require_once './pages/macskavendeg.php';
         break;
+    case 'buy':
+        require_once './pages/buy.php';
+        break;
     case 'payment':
         require_once './pages/payment.php';
         break;
     default:
-        require_once './index.php';
+        require_once './pages/home.php';
         break;
 }
