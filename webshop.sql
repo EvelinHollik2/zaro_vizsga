@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Jan 15. 12:01
+-- Létrehozás ideje: 2024. Jan 15. 12:06
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -114,8 +114,7 @@ CREATE TABLE `macskak` (
 
 CREATE TABLE `rendeles` (
   `userid` int(10) UNSIGNED NOT NULL,
-  `ctermekid` int(10) UNSIGNED NOT NULL,
-  `ktermekid` int(10) UNSIGNED NOT NULL
+  `termekid` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 -- --------------------------------------------------------
@@ -222,8 +221,7 @@ ALTER TABLE `kutya_termekek`
 --
 ALTER TABLE `rendeles`
   ADD UNIQUE KEY `userid` (`userid`),
-  ADD UNIQUE KEY `termekid` (`ctermekid`),
-  ADD UNIQUE KEY `ktermekid` (`ktermekid`);
+  ADD UNIQUE KEY `termekid` (`termekid`);
 
 --
 -- A tábla indexei `termekek`
@@ -274,8 +272,7 @@ ALTER TABLE `users`
 --
 ALTER TABLE `rendeles`
   ADD CONSTRAINT `rendeles_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`userid`),
-  ADD CONSTRAINT `rendeles_ibfk_2` FOREIGN KEY (`ctermekid`) REFERENCES `cica_termekek` (`ctermekid`),
-  ADD CONSTRAINT `rendeles_ibfk_3` FOREIGN KEY (`ktermekid`) REFERENCES `kutya_termekek` (`ktermekid`);
+  ADD CONSTRAINT `rendeles_ibfk_2` FOREIGN KEY (`termekid`) REFERENCES `cica_termekek` (`ctermekid`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
