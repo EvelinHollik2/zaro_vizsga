@@ -75,7 +75,7 @@ section{
 
 /*navigációs sáv, linkek*/
 a, .nav-link{
-    color: white;
+    color: black;
     text-decoration: none;
     display: inline-block;
     padding: 2px 5px;
