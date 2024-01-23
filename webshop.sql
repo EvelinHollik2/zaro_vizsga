@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Jan 18. 08:12
+-- Létrehozás ideje: 2024. Jan 23. 09:13
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -61,39 +61,41 @@ CREATE TABLE `termekek` (
 --
 
 INSERT INTO `termekek` (`termekid`, `termeknev`, `termekdb`, `termekar`, `fajta`) VALUES
-(1, 'cica kék szoknya', '10', '10000', 'macska'),
-(2, 'mikulás jelmez', '10', '12000', 'macska'),
-(3, 'pizzas macska pulover', '10', '5000', 'macska'),
-(4, 'macska ham', '10', '2000', 'macska'),
-(5, 'macska hám', '10', '5000', 'macska'),
-(6, 'fekete sárga macska pulóver', '10', '5000', 'macska'),
-(7, 'lila macska pulóver', '10', '5000', 'macska'),
-(8, 'barna macska pulóver', '10', '5000', 'macska'),
-(9, 'rózsaszín macska pulóver', '10', '5000', 'macska'),
-(10, 'kék rózsaszín macska pulóver', '10', '5000', 'macska'),
-(11, 'Best friends-es polo', '10', '5000', 'kutya'),
-(12, 'nagytestű kutya hám barna', '10', '16000', 'kutya'),
-(13, 'kék kutya kabát', '10', '15000', 'kutya'),
-(14, 'barna kutya kabat', '10', '11000', 'kutya'),
-(15, 'piros kutya kabát', '10', '13000', 'kutya'),
-(16, 'világos barna kutya kabát', '10', '14000', 'kutya'),
-(17, 'zöld kutya kabát', '10', '10000', 'kutya'),
-(18, 'szürke-kék kutya kabát', '10', '15000', 'kutya'),
-(19, 'sötét kék kabat', '10', '12000', 'kutya'),
-(20, 'virágos tavaszi kutya kabát', '10', '15000', 'kutya'),
-(21, 'bézs kutya kabát', '10', '13000', 'kutya'),
-(22, 'karacsonyi kutya pulover', '10', '16000', 'kutya'),
-(23, 'kistestű kutya hám', '10', '5000', 'kutya'),
-(24, 'kistestű kutya hám szürke', '10', '6000', 'kutya'),
-(25, 'kistestü kutya hám rózsaszín', '10', '7000', 'kutya'),
-(26, 'kistestű kutya hám barna', '10', '4000', 'kutya'),
-(27, 'kistestű kutya hám piros', '10', '5000', 'kutya'),
-(28, 'nagytestű kutya hám piros', '10', '10000', 'kutya'),
-(29, 'nagytestű kutya hám terepmintás', '10', '10000', 'kutya'),
-(30, 'kutya szoknya feher', '10', '5000', 'kutya'),
-(31, 'kutya pulover kacsas', '10', '5000', 'kutya'),
-(32, 'kutya szoknya fekete es piros', '10', '5000', 'kutya'),
-(33, 'piros kutya pulóver', '10', '5000', 'kutya');
+(1, 'Cica szoknya', '10', '2300', 'macska'),
+(2, 'Mikulás jelmez', '10', '2500', 'macska'),
+(3, 'Pizzás macska pulóver', '10', '3500', 'macska'),
+(4, 'Macska hám', '10', '2000', 'macska'),
+(5, 'Macska hám', '10', '2000', 'macska'),
+(6, 'Fekete-sárga macska pulóver', '10', '3500', 'macska'),
+(7, 'Lila macska pulóver', '10', '3500', 'macska'),
+(8, 'Barna macska pulóver', '10', '3500', 'macska'),
+(9, 'Rózsaszín macska pulóver', '10', '3500', 'macska'),
+(10, 'Kék-rózsaszín macska pulóver', '10', '3500', 'macska'),
+(11, 'Best friends-es póló', '10', '2000', 'kutya'),
+(12, 'Nagytestű kutya barna hám', '10', '2000', 'kutya'),
+(13, 'Kék kutya kabát', '10', '3900', 'kutya'),
+(14, 'Barna kutya kabát', '10', '3900', 'kutya'),
+(15, 'Piros kutya kabát', '10', '3900', 'kutya'),
+(16, 'Világos barna kutya kabát', '10', '3900', 'kutya'),
+(17, 'Zöld kutya kabát', '10', '3900', 'kutya'),
+(18, 'Szürke-kék kutya kabát', '10', '3900', 'kutya'),
+(19, 'Sötét kék kabát', '10', '3900', 'kutya'),
+(20, 'Virágos tavaszi kutya kabát', '10', '3900', 'kutya'),
+(21, 'Bézs kutya kabát', '10', '3900', 'kutya'),
+(22, 'Karácsonyi kutya pulóver', '10', '3900', 'kutya'),
+(23, 'Kistestű kutya hám', '10', '2000', 'kutya'),
+(24, 'Kistestű kutya hám szürke', '10', '2000', 'kutya'),
+(25, 'Kistestü kutya hám rózsaszín', '10', '2000', 'kutya'),
+(26, 'Kistestű kutya hám barna', '10', '2000', 'kutya'),
+(27, 'Kistestű kutya hám piros', '10', '2000', 'kutya'),
+(28, 'Nagytestű kutya hám piros', '10', '2000', 'kutya'),
+(29, 'Nagytestű kutya hám terepmintás', '10', '2000', 'kutya'),
+(30, 'Kutya szoknya fehér', '10', '2300', 'kutya'),
+(31, 'Kutya kacsás pulóver', '10', '3500', 'kutya'),
+(32, 'Kutya szoknya fekete-piros', '10', '2300', 'kutya'),
+(33, 'Piros kutya pulóver', '10', '3500', 'kutya'),
+(34, 'Kistestű szürke kutya hám ', '10', '2000', 'kutya'),
+(35, 'Kistestű kutya hám kék', '10', '2000', 'kutya');
 
 -- --------------------------------------------------------
 
@@ -147,7 +149,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `termekek`
 --
 ALTER TABLE `termekek`
-  MODIFY `termekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `termekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT a táblához `users`
