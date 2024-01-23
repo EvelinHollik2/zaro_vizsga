@@ -52,12 +52,9 @@ class Database {
         }
     }
     
-    public function CicaTermek() {
-        $result = $this->db->query("SELECT * FROM `cica_termekek`");
+    public function Termekek() {
+        $result = $this->db->query("SELECT * FROM `termekek`");
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    public function KutyaTermek() {
-        $result = $this->db->query("SELECT * FROM `kutya_termekek`");
-        return $result->fetch_all(MYSQLI_ASSOC);
-    }
+
 }

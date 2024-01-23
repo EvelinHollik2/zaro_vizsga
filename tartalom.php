@@ -16,17 +16,11 @@ switch ($menu) {
     case 'body':
         require_once './pages/body.php';
         break;
-    case 'kutya':
-        require_once './pages/kutya.php';
+    case 'termekek':
+        require_once './pages/termekek.php';
         break;
-    case 'macska':
-        require_once './pages/macska.php';
-        break;
-    case 'kutyavendeg':
-        require_once './pages/kutyavendeg.php';
-        break;
-    case 'macskavendeg':
-        require_once './pages/macskavendeg.php';
+    case 'termekvendeg':
+        require_once './pages/termekvendeg.php';
         break;
     case 'buy':
         require_once './pages/buy.php';

@@ -15,20 +15,14 @@
                             <a class = "nav-link' . ($menu == 'kijelentkezes' ? ' active' : '') . '" href = "index.php?menu=kijelentkezes">Kilépés</a>
                         </li>
                         <li class = "nav-item">
-                        <a class="nav-link' . ($menu == 'kutya' ? ' active' : '') . '" aria-current="page" href="index.php?menu=kutya">Kutya</a>
-                      </li>
-                        <li class = "nav-item">
-                        <a class="nav-link' . ($menu == 'macska' ? ' active' : '') . '" aria-current="page" href="index.php?menu=macska">Macska</a>
+                        <a class="nav-link' . ($menu == 'termekek' ? ' active' : '') . '" href="index.php?menu=termekek">Termékek</a>
                       </li>
                         <li class = "nav-item">
                             <a class = "nav-link' . ($menu == 'kosar' ? ' active' : '') . '" href = "index.php?menu=kosar">Kosár</a>
                         </li>';
                 } else {
                     echo '<li class = "nav-item">
-                        <a class = "nav-link' . ($menu == 'kutyavendeg' ? ' active' : '') . '" href = "index.php?menu=kutyavendeg">Kutya</a>
-                    </li>
-                    <li class = "nav-item">
-                        <a class = "nav-link' . ($menu == 'macskavendeg' ? ' active' : '') . '" href = "index.php?menu=macskavendeg">Macska</a>
+                        <a class = "nav-link' . ($menu == 'termekvendeg' ? ' active' : '') . '" href = "index.php?menu=termekvendeg">Termékek</a>
                     </li>
                     <li class = "nav-item">
                         <a class = "nav-link' . ($menu == 'bejelentkezes' ? ' active' : '') . '" href = "index.php?menu=bejelentkezes">Belépés</a>
