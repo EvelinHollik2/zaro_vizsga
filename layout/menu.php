@@ -8,7 +8,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?menu=home">Főoldal</a>
                 </li>
-                
                 <?php
                 if ($_SESSION['login']) {
                     echo '<li class="nav-item">
