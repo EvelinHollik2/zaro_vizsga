@@ -75,7 +75,7 @@ section{
 
 /*navigációs sáv, linkek*/
 a, .nav-link{
-    color: black;
+    color: blue;
     text-decoration: none;
     display: inline-block;
     padding: 2px 5px;
@@ -174,7 +174,7 @@ nav ul{
 .collapse{
     justify-content: center;
     width: 100%;
-    font-size: 180%;
+    /*font-size: 180%;*/
     border-radius:10px;
 }
 
