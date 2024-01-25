@@ -1,6 +1,6 @@
 html{
     box-sizing:  border-box;
-
+    color: #984F07;
 }
 
 *, *:before, *:after{
@@ -10,7 +10,7 @@ html{
 body{
     /*rgb(152, 184, 156)*/
     background-color:  rgb(226, 217, 198);
-    color:rgba(77, 50, 20, 0.767);
+    color:#984F07;
     font-family: sans-serif;
     margin: 0;
     text-align: center;
@@ -22,7 +22,6 @@ body{
 .h{
     align-items: center;
 }
-
 
 
 section, header, footer{
@@ -75,7 +74,7 @@ section{
 
 /*navigációs sáv, linkek*/
 a, .nav-link{
-    color: blue;
+    color: #984F07;
     text-decoration: none;
     display: inline-block;
     padding: 2px 5px;
@@ -88,12 +87,13 @@ a:visited{
 
 
 nav ul{
+    color: #984F07;
     display: flex;
     list-style: none;
     margin: 0 ;
     margin: 0;
     padding: 0;
-
+    font-size: 25px;
 }
 
 
@@ -174,7 +174,7 @@ nav ul{
 .collapse{
     justify-content: center;
     width: 100%;
-    /*font-size: 180%;*/
+    font-size: 180%;
     border-radius:10px;
 }
 

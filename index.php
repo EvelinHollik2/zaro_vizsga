@@ -19,10 +19,9 @@ $menu = filter_input(INPUT_GET, "menu", FILTER_SANITIZE_SPECIAL_CHARS);
         require_once './layout/menu.php';
         require_once './tartalom.php';
         ?>
-        <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    
         <!-- https://getbootstrap.com/docs/5.3/forms/validation/ -->
-        <script src="js/vegyes.js"></script>
-
+        
     </body>
 </html>
 
