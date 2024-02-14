@@ -1,6 +1,6 @@
 <div class="row">
     <?php
-    foreach ($db->Termekek() as $row) {
+    foreach ($db->KTermekek() as $row) {
         $image = null;
         if (file_exists("./Kepek/a_vasarlas/termekek/" . $row['termeknev'] . ".jpg")) {
             $image = "./Kepek/a_vasarlas/termekek/" . $row['termeknev'] . ".jpg";

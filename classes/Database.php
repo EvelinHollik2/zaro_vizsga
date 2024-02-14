@@ -8,7 +8,7 @@ class Database {
         $this->db = new mysqli($host, $username, $pass, $db);
     }
 
-    public function login($username, $pass) {
+    public function login($username, $pass) {       
         //-- jelezzük a végrehajtandó SQL parancsot 
         $stmt = $this->db->prepare('SELECT * FROM users WHERE users.username LIKE ?;');
         //-- elküdjük a végrehajtáshoz szükséges adatokat
@@ -55,6 +55,21 @@ class Database {
     public function Termekek() {
         $result = $this->db->query("SELECT * FROM `termekek`");
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function KTermekek() {
+        $result = $this->db->query("SELECT * FROM `termekek` WHERE `fajta` = 'kutya';");
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function MTermekek() {
+        $result = $this->db->query("SELECT * FROM `termekek` WHERE `fajta` = 'macska';");
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    public function Profil() {
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE username LIKE ?;"); //-- megmondjuk mit akarunk
+        $stmt->bind_param("s", $_SESSION['username']); //-- átadjuk az adatokat
+        $stmt->execute(); //-- végrehajtatjuk
+        $result = $stmt->get_result(); //-- lekérjük az eredményt
+        return $result->fetch_assoc();
     }
 
 }

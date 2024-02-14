@@ -19,6 +19,15 @@ switch ($menu) {
     case 'termekek':
         require_once './pages/termekek.php';
         break;
+    case 'Macska':
+        require_once './pages/Macska.php';
+        break;
+    case 'Kutya':
+        require_once './pages/Kutya.php';
+        break;
+    case 'ossztermek':
+        require_once './pages/ossztermek.php';
+        break;
     case 'termekvendeg':
         require_once './pages/termekvendeg.php';
         break;
@@ -27,6 +36,12 @@ switch ($menu) {
         break;
     case 'payment':
         require_once './pages/payment.php';
+        break;
+    case 'Profil':
+        require_once './pages/Profil.php';
+        break;
+    case 'profil_szerkesztes':
+        require_once './pages/profil_szerkesztes.php';
         break;
     default:
         require_once './pages/home.php';

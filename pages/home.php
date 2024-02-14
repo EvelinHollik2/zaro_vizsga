@@ -41,7 +41,7 @@
         <div class="col-sm-6 p-3 m-auto">
           <h3>Tavaszi kollekció</h3>
         </div>
-        <div class="col-sm-6 p-3 m-auto"><img src="Kepek/k6.jpg" alt="kutyus"></div>
+          <div class="col-sm-6 p-3 m-auto"><a href="" target="target"><img src="Kepek/k6.jpg" alt="kutyus"></a></div>
       </div>
     </div>
   </nav>
@@ -49,7 +49,7 @@
   <nav>
     <div class="oszi container">
       <div class="row">
-          <div class="col-sm-6 p-3 m-auto"><img src="Kepek/kollekciok/nyar.jpeg" alt="kutyus"></div>
+          <div class="col-sm-6 p-3 m-auto"><a href="" target="target"><img src="Kepek/kollekciok/nyar.jpeg" alt="kutyus"></a></div>
         <div class="col-sm-6 p-3 m-auto">
           <h3>Nyári kollekció</h3>
         </div>
@@ -63,7 +63,7 @@
         <div class="col-sm-6 p-3 m-auto">
           <h3>Őszi kollekció</h3>
         </div>
-          <div class="col-sm-6 p-3 m-auto"><img src="Kepek/kollekciok/oszi.jpg" alt="kutyus"></div>
+          <div class="col-sm-6 p-3 m-auto"><a href="" target="target"><img src="Kepek/kollekciok/oszi.jpg" alt="kutyus"></a></div>
       </div>
     </div>
   </nav>
@@ -71,15 +71,26 @@
   <nav>
     <div class="oszi container">
       <div class="row">
-          <div class="col-sm-6 p-3 m-auto"><img src="Kepek/kollekciok/teli.jpg" alt="kutyus"></div>
+          <div class="col-sm-6 p-3 m-auto"><a href="" target="target"><img src="Kepek/kollekciok/teli.jpg" alt="kutyus"></a></div>
         <div class="col-sm-6 p-3 m-auto">
           <h3>Téli kollekció</h3>
         </div>
       </div>
     </div>
   </nav>
-  </div>
+  <br>
+ <nav>
+    <div class="oszi container">
+      <div class="row">
+        <div class="col-sm-6 p-3 m-auto">
+          <h3>Kiegészítő</h3>
+        </div>
+          <div class="col-sm-6 p-3 m-auto"><a href="" target="target"><img src="./Kepek/kollekciok/Lánc.webp" alt="kutyus"></a></div>
+      </div>
+    </div>
+             
   </nav>
+  <br>
 
   <script defer src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
   <script src="js/jquery.min.js"></script>

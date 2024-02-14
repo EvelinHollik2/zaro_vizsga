@@ -11,8 +11,9 @@ if (filter_input(INPUT_POST,
 
     if ($db->login($username, $pass)) {
         $_SESSION['login'] = true;
-        $_SESSION['username'] = '';
-        $_SESSION['password'] = '';
+        
+        //$_SESSION['username'] = '';
+        //$_SESSION['password'] = '';
         header("Location: index.php");  
     }
 }
