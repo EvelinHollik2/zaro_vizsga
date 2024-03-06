@@ -5,7 +5,7 @@ switch ($menu) {
         require_once './pages/kijelentkezes.php';
         break;
     case 'kosar':
-        require_once './pages/kosar.php';
+        require_once './pages/kosarTartalomMegjelenitese.php';
         break;
     case 'bejelentkezes':
         require_once './pages/bejelentkezes.php';

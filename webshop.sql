@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Jan 23. 09:13
+-- Létrehozás ideje: 2024. Jan 30. 09:16
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -53,49 +53,63 @@ CREATE TABLE `termekek` (
   `termeknev` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `termekdb` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `termekar` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `fajta` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `fajta` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kollekcio` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `termekek`
 --
 
-INSERT INTO `termekek` (`termekid`, `termeknev`, `termekdb`, `termekar`, `fajta`) VALUES
-(1, 'Cica szoknya', '10', '2300', 'macska'),
-(2, 'Mikulás jelmez', '10', '2500', 'macska'),
-(3, 'Pizzás macska pulóver', '10', '3500', 'macska'),
-(4, 'Macska hám', '10', '2000', 'macska'),
-(5, 'Macska hám', '10', '2000', 'macska'),
-(6, 'Fekete-sárga macska pulóver', '10', '3500', 'macska'),
-(7, 'Lila macska pulóver', '10', '3500', 'macska'),
-(8, 'Barna macska pulóver', '10', '3500', 'macska'),
-(9, 'Rózsaszín macska pulóver', '10', '3500', 'macska'),
-(10, 'Kék-rózsaszín macska pulóver', '10', '3500', 'macska'),
-(11, 'Best friends-es póló', '10', '2000', 'kutya'),
-(12, 'Nagytestű kutya barna hám', '10', '2000', 'kutya'),
-(13, 'Kék kutya kabát', '10', '3900', 'kutya'),
-(14, 'Barna kutya kabát', '10', '3900', 'kutya'),
-(15, 'Piros kutya kabát', '10', '3900', 'kutya'),
-(16, 'Világos barna kutya kabát', '10', '3900', 'kutya'),
-(17, 'Zöld kutya kabát', '10', '3900', 'kutya'),
-(18, 'Szürke-kék kutya kabát', '10', '3900', 'kutya'),
-(19, 'Sötét kék kabát', '10', '3900', 'kutya'),
-(20, 'Virágos tavaszi kutya kabát', '10', '3900', 'kutya'),
-(21, 'Bézs kutya kabát', '10', '3900', 'kutya'),
-(22, 'Karácsonyi kutya pulóver', '10', '3900', 'kutya'),
-(23, 'Kistestű kutya hám', '10', '2000', 'kutya'),
-(24, 'Kistestű kutya hám szürke', '10', '2000', 'kutya'),
-(25, 'Kistestü kutya hám rózsaszín', '10', '2000', 'kutya'),
-(26, 'Kistestű kutya hám barna', '10', '2000', 'kutya'),
-(27, 'Kistestű kutya hám piros', '10', '2000', 'kutya'),
-(28, 'Nagytestű kutya hám piros', '10', '2000', 'kutya'),
-(29, 'Nagytestű kutya hám terepmintás', '10', '2000', 'kutya'),
-(30, 'Kutya szoknya fehér', '10', '2300', 'kutya'),
-(31, 'Kutya kacsás pulóver', '10', '3500', 'kutya'),
-(32, 'Kutya szoknya fekete-piros', '10', '2300', 'kutya'),
-(33, 'Piros kutya pulóver', '10', '3500', 'kutya'),
-(34, 'Kistestű szürke kutya hám ', '10', '2000', 'kutya'),
-(35, 'Kistestű kutya hám kék', '10', '2000', 'kutya');
+INSERT INTO `termekek` (`termekid`, `termeknev`, `termekdb`, `termekar`, `fajta`, `kollekcio`) VALUES
+(1, 'Cica szoknya', '10', '2300', 'macska', 'nyári'),
+(2, 'Mikulás jelmez', '10', '2500', 'macska', 'téli'),
+(3, 'Pizzás macska pulóver', '10', '3500', 'macska', 'téli'),
+(4, 'Macska hámok', '10', '2000', 'macska', 'kiegészítő'),
+(5, 'Macska hám', '10', '2000', 'macska', 'kiegészítő'),
+(6, 'Fekete-sárga macska pulóver', '10', '3500', 'macska', 'téli'),
+(7, 'Lila macska pulóver', '10', '3500', 'macska', 'téli'),
+(8, 'Barna macska pulóver', '10', '3500', 'macska', 'téli'),
+(9, 'Rózsaszín macska pulóver', '10', '3500', 'macska', 'téli'),
+(10, 'Kék-rózsaszín macska pulóver', '10', '3500', 'macska', 'téli'),
+(11, 'Best friends-es póló', '10', '2000', 'kutya', 'tavasz'),
+(12, 'Nagytestű kutya hám barna', '10', '2000', 'kutya', 'kiegészítő'),
+(13, 'Kék kutya kabát', '10', '3900', 'kutya', 'téli'),
+(14, 'Barna kutya kabát', '10', '3900', 'kutya', 'téli'),
+(15, 'Piros kutya kabát', '10', '3900', 'kutya', 'téli'),
+(16, 'Világos barna kutya kabát', '10', '3900', 'kutya', 'téli'),
+(17, 'Zöld kutya kabát', '10', '3900', 'kutya', 'téli'),
+(18, 'Szürke-kék kutya kabát', '10', '3900', 'kutya', 'téli'),
+(19, 'Sötét kék kabát', '10', '3900', 'kutya', 'téli'),
+(20, 'Virágos tavaszi kutya kabát', '10', '3900', 'kutya', 'téli'),
+(21, 'Bézs kutya kabát', '10', '3900', 'kutya', 'téli'),
+(22, 'Karácsonyi kutya pulóver', '10', '3900', 'kutya', 'téli'),
+(23, 'Kistestű kutya hám', '10', '2000', 'kutya', 'kiegészítő'),
+(24, 'Kistestű kutya hám szürke', '10', '2000', 'kutya', 'kiegészítő'),
+(25, 'Kistestü kutya hám rózsaszín', '10', '2000', 'kutya', 'kiegészítő'),
+(26, 'Kistestű kutya hám barna', '10', '2000', 'kutya', 'kiegészítő'),
+(27, 'Kistestű kutya hám piros', '10', '2000', 'kutya', 'kiegészítő'),
+(28, 'Nagytestű kutya hám piros', '10', '2000', 'kutya', 'kiegészítő'),
+(29, 'Nagytestű kutya hám terepmintás', '10', '2000', 'kutya', 'kiegészítő'),
+(30, 'Kutya szoknya fehér', '10', '2300', 'kutya', 'nyári'),
+(31, 'Kutya kacsás pulóver', '10', '3500', 'kutya', 'téli'),
+(32, 'Kutya szoknya fekete-piros', '10', '2300', 'kutya', 'nyári'),
+(33, 'Piros kutya pulóver', '10', '3500', 'kutya', 'téli'),
+(35, 'Kistestű kutya hám kék', '10', '2000', 'kutya', 'kiegészítő'),
+(36, 'Rénszarvas jelmez cicának', '10', '2500', 'macska', 'téli'),
+(37, 'Türkizkék hám cicának', '10', '2000', 'macska', 'kiegészítő'),
+(38, 'Kék virágos nyakörv cicának', '10', '1500', 'macska', 'kiegészítő'),
+(39, 'Puha rózsaszín pulóver cicának', '10', '3500', 'macska', 'téli'),
+(40, 'Macis pulóver cicának', '10', '3000', 'macska', 'téli'),
+(41, 'Rózsaszín köves nyakörv cicának', '10', '2000', 'macska', 'kiegészítő'),
+(42, 'Barna szőrmés pulóver cicának', '10', '3500', 'macska', 'téli'),
+(43, 'Szürke póló cicának', '10', '2000', 'macska', 'tavasz'),
+(44, 'Rózsaszín hám cicának', '10', '2000', 'macska', 'kiegészítő'),
+(45, 'Fluoreszkáló nyakörv cicának', '10', '1500', 'macska', 'kiegészítő'),
+(46, 'Fekete fényvisszaverő hám cicának', '10', '2000', 'macska', 'kiegészítő'),
+(47, 'Fekete-fehér kockás mellény cicának', '10', '2500', 'macska', 'ősz'),
+(48, 'Fekete-piros kockás mellény cicának', '10', '2500', 'macska', 'ősz'),
+(49, 'Lánc', '10', '2400', 'macska', 'kiegészítő');
 
 -- --------------------------------------------------------
 
@@ -116,7 +130,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userid`, `username`, `email`, `password`) VALUES
 (1, 'asd', 'asd@gmail.com', 'asd'),
-(4, 'qwe', 'qwe@gmail.com', 'qwe');
+(4, 'qwe', 'qwe@gmail.com', 'qwe'),
+(5, 'Pisti', 'asd@gmail.eu', 'sziahelo');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -149,13 +164,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `termekek`
 --
 ALTER TABLE `termekek`
-  MODIFY `termekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `termekid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `userid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Megkötések a kiírt táblákhoz

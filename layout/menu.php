@@ -18,7 +18,10 @@
                       </li>
                         <li class = "nav-item">
                             <a class = "nav-link' . ($menu == 'kosar' ? ' active' : '') . '" href = "index.php?menu=kosar">Kosár</a>
-                        </li>';
+                        </li>
+                        <li class = "nav-item">
+                        <a class="nav-link' . ($menu == 'Profil' ? ' active' : '') . '" href="index.php?menu=Profil">Profil</a>
+                      </li>';
                 } else {
                     echo '<li class = "nav-item">
                         <a class = "nav-link' . ($menu == 'termekvendeg' ? ' active' : '') . '" href = "index.php?menu=termekvendeg">Termékek</a>

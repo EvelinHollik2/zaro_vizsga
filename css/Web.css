@@ -10,7 +10,7 @@ html{
 body{
     /*rgb(152, 184, 156)*/
     background-color:  rgb(226, 217, 198);
-    color:#984F07;
+
     font-family: sans-serif;
     margin: 0;
     text-align: center;
@@ -23,6 +23,20 @@ body{
     align-items: center;
 }
 
+.privacy{
+    text-decoration: none;
+    color: white;
+}
+.plat{
+   width: 70px;
+   padding: 10px;
+}
+
+
+
+.TAP{
+   width: 80px; 
+}
 
 section, header, footer{
     background:rgb(226, 217, 198);
@@ -69,7 +83,7 @@ section{
     text-decoration: none;
 }
 .onmaga{
-    color: black;
+    color: #984F07;
 }
 
 /*navigációs sáv, linkek*/
@@ -82,7 +96,7 @@ a, .nav-link{
 }
 
 a:visited{
-    color: black;
+    color: #984F07;
 }
 
 
@@ -111,7 +125,11 @@ nav ul{
 #formc{
     width: 70%
 }
-
+.bejel{
+    border: 50px;
+    border-color: black;
+    padding: 160px 0px;
+}
 
 
 /*kártyák*/
@@ -119,10 +137,13 @@ nav ul{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
+    margin-bottom: 15px;
+    margin-top: 10px;
     text-align: center;
     font-family: arial;
     padding-top: 10px;
     height: 520px;
+
 
 }
 
@@ -222,6 +243,15 @@ img{
     color:rgb(226, 217, 198);
 }
 
+.termek{
+    background-color: rgb(152, 184, 156);
+    border: 2px solid rgb(152, 184, 156);
+    justify-content: center;
+    border-radius: 200px;
+    max-width: 90%;
+    color:rgb(226, 217, 198);
+}
+
 h3{
     text-align: center;
     justify-content: center;
@@ -311,11 +341,11 @@ h3{
 }
 
 .left-container .puppy {
-   margin-top: 227px;
-     display: block;
-  margin-left: -79px;
-  margin-right: auto;
-  width: 150%;
+    margin-top: 227px;
+    display: block;
+    margin-left: -79px;
+    margin-right: auto;
+    width: 150%;
 }
 
 /*kutya kosár

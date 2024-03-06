@@ -18,7 +18,7 @@ if (filter_input(INPUT_POST,
     }
 }
 ?>
-<div class="container">
+<div class="container bejel">
     <form action="#" method="post">
         <div class="mb-3">
             <label for="email" class="form-label">E-mail cím:</label>
@@ -36,3 +36,4 @@ if (filter_input(INPUT_POST,
     </form>
     <a href="index.php?menu=regist">Regisztráció</a> 
 </div>
+

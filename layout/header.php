@@ -1,1 +1,1 @@
-<a href="index.php?menu=home" class="logo"><h2 class="onmaga">Webshop</h2><img src="./logo,ikonok/logoo.png" alt="alt" height="150"/></a>
+<a href="index.php?menu=home" class="logo"><h1 class="onmaga">Cats&Dogs</h1></a>
