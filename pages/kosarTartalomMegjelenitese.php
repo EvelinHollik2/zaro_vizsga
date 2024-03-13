@@ -22,20 +22,53 @@
                 } else {
                     $image = "./Kepek/a_vasarlas/noimg/noimage.jpg";
                 }
-                
-                echo '<div class="termekek" style="width: 18rem;">';
-                echo '<img src="' . $image . '" alt="...">';
-                echo '<h2> ' . $row['termeknev'] . '</h2>';
-                echo '<p> ' . $row['termekar'] . ' Ft</p>';
-                echo '</div>';                
+                $termek = array(
+                    'id' => $row['termekid'],
+                    'nev' => $row['termeknev'],
+                    'ar' => $row['termekar'],
+                    'kep' => $image
+                );
+                $termek_megtalalva = false;
+                if (isset($_SESSION['kosar'])) {
+                    foreach ($_SESSION['kosar'] as $kosar_termek) {
+                        if ($kosar_termek['id'] == $termek['id']) {
+                            $termek_megtalalva = true;
+                            break;
+                        }
+                    }
+                } else {
+                    // -- kosár üres
+                }
+                if (!$termek_megtalalva) {
+                    $_SESSION['kosar'][] = $termek;
+                }
             }
         } else {
             echo 'Nincs találat.';
         }
-    } else {
-        echo 'Nincs kiválasztva termék.';
     }
-
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($POST['delete_item'])) {
+            $delete_index = $_POST['delete_index'];
+            unset($_SESSION['kosar'][$delete_index]);
+            $_SESSION['kosar'] = array_values($_SESSION['kosar']);
+        }
+    }
+    if (!empty($_SESSION['kosar'])) {
+        foreach ($_SESSION['kosar'] as $index => $termek) {
+            echo '<img src="' . $termek['kep'] . '" style="width: 100px ;">';
+            echo '<div class="termek">';
+            echo '<h2>' . $termek['nev'] . '</h2>';
+            echo '<p>Ár: ' . $termek['ar'] . ' Ft</p>';
+            // Itt további adatokat jeleníthetsz meg a termékekről
+            echo '<imput type="hidden" name="delete_index" value="' . $index . '">';
+            echo '<button class="btn-danger" name="delete_item" >törlés</button>';
+            echo '</div>';
+        }
+    } else {
+        echo 'A kosár üres.';
+    }
     ?>
 <a class="nav-link" href="index.php?menu=buy"><button class="btn">Vásárlás</button></a>
 </pre>
+

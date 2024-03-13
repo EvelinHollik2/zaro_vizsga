@@ -15,5 +15,5 @@
             </div>
         </div>
     </div>
-    <button id="IDEE" onclick="more()">MORE</button>
+
 </nav>

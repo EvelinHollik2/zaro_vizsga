@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row rendezes">
     <form action="index.php?menu=kosar" method="POST">
         <?php
         foreach ($db->MTermekek() as $row) {
@@ -21,8 +21,8 @@
                     '<p class="card-text">Termék darab: ' . $row['termekdb'] . '</p>' .
                     '<p class="card-text">Termék ár: ' . $row['termekar'] . ' Ft</p>' .
                     '<p class="card-text">Fajta: ' . $row['fajta'] . '</p>' .
-                    '<input type="checkbox" name="kivalasztva[]" value="' . $row['termekid'] . '">
-                    </div>
+                    '<input type="checkbox" name="kivalasztva[]" class="kockas" value="' . $row['termekid'] . '">Kiválasztás' .
+                    '</div>
                 </div>
             ';
 
