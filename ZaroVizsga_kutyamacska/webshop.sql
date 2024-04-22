@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 08. 10:54
+-- Létrehozás ideje: 2024. Ápr 22. 07:52
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `kosar` (
-  `termekid` int(11) NOT NULL,
+  `termekid` int(11) UNSIGNED NOT NULL,
   `datum` timestamp NOT NULL DEFAULT current_timestamp(),
-  `userid` int(11) NOT NULL,
+  `userid` int(11) UNSIGNED NOT NULL,
   `mennyiseg` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -54,6 +54,29 @@ CREATE TABLE `rendeles` (
 
 INSERT INTO `rendeles` (`userid`, `termekid`, `datum`, `darab`, `ar`) VALUES
 (1, 26, '2024-01-18 07:09:20', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `szallitas`
+--
+
+CREATE TABLE `szallitas` (
+  `userid` int(10) UNSIGNED NOT NULL,
+  `irszam` int(4) NOT NULL,
+  `telepules` varchar(20) NOT NULL,
+  `utca` varchar(20) NOT NULL,
+  `hazszam` int(3) NOT NULL,
+  `emelet` varchar(5) DEFAULT NULL,
+  `telefonszam` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- A tábla adatainak kiíratása `szallitas`
+--
+
+INSERT INTO `szallitas` (`userid`, `irszam`, `telepules`, `utca`, `hazszam`, `emelet`, `telefonszam`) VALUES
+(7, 4024, 'Debrecen', 'Burgundia utca', 3, '1/5', '+38541569545');
 
 -- --------------------------------------------------------
 
@@ -144,11 +167,19 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`userid`, `username`, `email`, `password`) VALUES
 (1, 'asd', 'asd@gmail.com', 'asd'),
 (4, 'qwer', 'qwer@gmail.com', 'qwer'),
-(5, 'Pisti', 'asd@gmail.eu', 'sziahelo');
+(5, 'Pisti', 'asd@gmail.eu', 'sziahelo'),
+(7, 'Admin', 'admin@gmail.com', 'admin');
 
 --
 -- Indexek a kiírt táblákhoz
 --
+
+--
+-- A tábla indexei `kosar`
+--
+ALTER TABLE `kosar`
+  ADD UNIQUE KEY `termekid` (`termekid`),
+  ADD UNIQUE KEY `userid` (`userid`);
 
 --
 -- A tábla indexei `rendeles`
@@ -156,6 +187,12 @@ INSERT INTO `users` (`userid`, `username`, `email`, `password`) VALUES
 ALTER TABLE `rendeles`
   ADD UNIQUE KEY `userid` (`userid`),
   ADD UNIQUE KEY `termekid` (`termekid`);
+
+--
+-- A tábla indexei `szallitas`
+--
+ALTER TABLE `szallitas`
+  ADD UNIQUE KEY `userid` (`userid`);
 
 --
 -- A tábla indexei `termekek`
@@ -183,11 +220,18 @@ ALTER TABLE `termekek`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `userid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Megkötések a kiírt táblákhoz
 --
+
+--
+-- Megkötések a táblához `kosar`
+--
+ALTER TABLE `kosar`
+  ADD CONSTRAINT `ws_kosar_termek` FOREIGN KEY (`termekid`) REFERENCES `termekek` (`termekid`),
+  ADD CONSTRAINT `ws_kosar_users` FOREIGN KEY (`userid`) REFERENCES `users` (`userid`);
 
 --
 -- Megkötések a táblához `rendeles`
@@ -195,6 +239,12 @@ ALTER TABLE `users`
 ALTER TABLE `rendeles`
   ADD CONSTRAINT `rendeles_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`userid`),
   ADD CONSTRAINT `rendeles_ibfk_2` FOREIGN KEY (`termekid`) REFERENCES `termekek` (`termekid`);
+
+--
+-- Megkötések a táblához `szallitas`
+--
+ALTER TABLE `szallitas`
+  ADD CONSTRAINT `szallitas_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`userid`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
