@@ -3,6 +3,8 @@
 class Database {
 
     private $db = null;
+    public $errormessage = "";
+    private $error = false;
 
     public function __construct($host, $username, $pass, $db) {
         $this->db = new mysqli($host, $username, $pass, $db);
@@ -78,7 +80,7 @@ class Database {
         } catch (Exception $e) {
 
             echo 'Error: ' . $e->getMessage();
-        }        
+        }
     }
 
     public function szalladat() {
@@ -94,7 +96,7 @@ class Database {
                 $_SESSION['hazszam'] = $row['hazszam'];
                 $_SESSION['emelet'] = $row['emelet'];
                 $_SESSION['telefonszam'] = $row['telefonszam'];
-            } 
+            }
         } catch (Exception $e) {
 
             echo 'Error: ' . $e->getMessage();
@@ -190,45 +192,73 @@ class Database {
 
     /* profil edit */
 
-    public function UserEdit($username, $email, $pass) {
-        $stmt = "";
-        if (validUsername($username)) {
+    public function UserEdit($username, $email, $passNew, $passOld) {
+        $olduserName = $_SESSION['username'];
+        if (empty($username)) {
             $username = $_SESSION['username'];
+        } else if ($this->validUsername($username)) {
+            $username = $username;
+        } else {
+            return false;
         }
-        if (validEmail($email)) {
+
+        if (empty($email)) {
             $email = $_SESSION['email'];
         }
-        if (validPass($pass)) {
-            $pass = $_SESSION['password'];
+        if (!$this->validEmail($email)) {
+            return false;
         }
-        $stmt = $this->db->prepare(`UPDATE users SET username=?, email=?,password=? WHERE username=?`);
-        $stmt->bind_param('ssss', $username, $email, $pass, $username);
+
+        if (empty($passNew)) {
+            $passNew = $passOld;
+        } else if (!$this->validPass($passNew)) {
+            return false;
+        }
+
+
+        if ($this->error) {
+            return false;
+        }
+        $stmt = $this->db->prepare('UPDATE users SET username=?, email=?,password=? WHERE username=?');
+        $stmt->bind_param('ssss', $username, $email, $passNew, $olduserName);
         if ($stmt->execute()) {
             //-- sikeres végrehajtás után lekérjük az adatokat
-            $result = $stmt->get_result();
-            $row = $result->fetch_assoc();
-            //var_dump(password_hash($pass, PASSWORD_ARGON2I));
-            //var_dump($row, $pass);
-            if ($pass == $row['password']) {
-                //-- felhasználónév és jelszó helyes
-                $_SESSION['username'] = $row['username'];
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['password'] = $row['password'];
-                $_SESSION['userid'] = $row['userid'];
-            }
+            $row = $this->Profil();
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['userid'] = $row['userid'];
+            $_SESSION['password'] = $row['password'];
         }
+        return true;
     }
 
     function validUsername($param) {
         //-- üres?
+        $valid = true;
+
         //-- minimális hossz?
+        if (strlen($param) < 3) {
+            $valid = false;
+            $this->error = true;
+            $this->errormessage = "Legalább 3 karakter kell";
+        }
+        return $valid;
     }
 
     function validEmail($param) {
-        
+        return filter_var($param, FILTER_VALIDATE_EMAIL);
     }
 
     function validPass($param) {
-        
+        //-- elfogadható karakterek: #@&  preg_match()
+        $valid = true;
+
+        //-- minimális hossz?
+        if (strlen($param) < 3) {
+            $valid = false;
+            $this->error = true;
+            $this->errormessage = "Jelszó 3 karakter kell";
+        }
+        return $valid;
     }
 }
