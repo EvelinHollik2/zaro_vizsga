@@ -1,0 +1,399 @@
+html{
+    box-sizing:  border-box;
+    color: #984F07;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    /*rgb(152, 184, 156)*/
+    background-color:  rgb(226, 217, 198);
+
+    font-family: sans-serif;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.h{
+    align-items: center;
+}
+
+.privacy{
+    text-decoration: none;
+    color: white;
+}
+.plat{
+    width: 70px;
+    padding: 10px;
+}
+
+
+
+.TAP{
+    width: 80px;
+}
+
+section, header, footer{
+    background:rgb(226, 217, 198);
+    font-size: 2em;
+    color: rgba(77, 50, 20, 0.767);
+    text-align: center;
+    padding: 5px;
+    margin: 0 0;
+}
+
+section{
+    font-size: 1em;
+}
+
+/*tappancs logó*/
+.tap{
+    width: 30%;
+    height: 30%;
+}
+
+.logo{
+    width: 10%;
+    height: 10%;
+    text-align: center;
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+.lec{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navikus{
+    background-color: rgb(152, 184, 156);
+}
+
+
+/*cím linkkel*/
+.onmaga:hover{
+    text-decoration: none;
+}
+.onmaga{
+    color: #984F07;
+}
+
+/*navigációs sáv, linkek*/
+a, .nav-link{
+    color: #984F07;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 5px;
+    text-align: center;
+}
+
+a:visited{
+    color: #984F07;
+}
+
+
+nav ul{
+    color: #984F07;
+    display: flex;
+    list-style: none;
+    margin: 0 ;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+
+/*kutya, cica*/
+.sorol{
+    text-align: center;
+}
+
+.kepek{
+    width: 180px;
+    height: auto;
+}
+.kepekk{
+    width: 150px;
+    height: auto;
+}
+
+#megjel{
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+#megjel:hover{
+    background-color: green;
+}
+
+.kockas{
+    padding: 0px;
+}
+
+
+/*bejelntkezési felület*/
+.form-control{
+    width: 20%;
+    margin:auto;
+}
+#formc{
+    width: 70%
+}
+.bejel{
+    border: 50px;
+    border-color: black;
+    padding-top: 100px;
+}
+
+
+/*kártyák*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: arial;
+    padding-top: 10px;
+    height: 520px;
+
+
+}
+
+.card img{
+    max-height: 250px;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #3d8291;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+
+/*keresés gomb*/
+.btn{
+    background-color: #3d8291;
+    border: 1px solid white;
+    color:white;
+    border-radius:10px;
+}
+
+.btn:hover{
+    color:white;
+    border: 1px solid white;
+}
+
+.btn:active{
+    color:white;
+    border: 1px solid white;
+}
+
+/*keresési gomb szélessége*/
+.collapse{
+    justify-content: center;
+    width: 100%;
+    font-size: 180%;
+    border-radius:10px;
+}
+
+/*keresési input*/
+#keres{
+    width: 150%;
+}
+
+input{
+    border: 0;
+    padding: 0px 10px;
+    width: 10%;
+}
+
+
+/*Mozgó kép*/
+.carousel-inner img{
+    width: 40%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+.carousel-indicators{
+    border: none;
+}
+
+.container{
+    max-width: 200%;
+    margin: 0 auto;
+}
+
+img{
+    width: 40%;
+    height: auto;
+    border-radius: 5%;
+}
+
+/*Őszi kollekciós tábla*/
+.oszi{
+    background-color: rgb(152, 184, 156);
+    border: 2px solid rgb(152, 184, 156);
+    justify-content: center;
+    max-width: 60%;
+    border-radius: 5%;
+    color:rgb(226, 217, 198);
+}
+
+.termek{
+    background-color: rgb(152, 184, 156);
+    border: 2px solid rgb(152, 184, 156);
+    justify-content: center;
+    border-radius: 200px;
+    max-width: 90%;
+    color:rgb(226, 217, 198);
+}
+.termek2{
+    background-color: rgb(152, 184, 156);
+    border: 2px solid rgb(152, 184, 156);
+    justify-content: center;
+    border-radius: 200px;
+    width: 150%;
+    color:#984F07;
+}
+
+h3{
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+/*js*/
+.toggleNav {
+    display: none;
+}
+
+/*CSILLAG*/
+.error {
+    color: #FF0000;
+}
+
+/*szállítás*/
+
+.right-container .szallit input{
+    width: 25rem;
+}
+/*regisztráció*/
+.right-container {
+    background: rgb(152, 184, 156);
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 500px;
+    font-size: 20px;
+}
+
+.right-container h1:nth-of-type(1) {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.right-container .set {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.right-container input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+}
+
+.right-container label,
+.right-container input,
+.right-container .pets-photo {
+    width: 180px;
+}
+
+.btn1{
+    background-color: #3d8291;
+    border: 1px solid white;
+    color:white;
+    width: 150px;
+    border-radius:10px;
+}
+
+.tapi{
+    max-width: 30%;
+    max-height: 30%;
+}
+
+.signup-container {
+    display: grid;
+    grid-template-areas: "left right";
+    max-width: 900px;
+    justify-items: center;
+    margin-top: 5vw;
+}
+
+.left-container {
+    background: rgb(108,144,113);
+    overflow: hidden;
+    padding: 40px 0 0 0;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    margin-right: -100px;
+
+}
+.left-container h1 {
+    color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    font-size: 27px;
+}
+
+.left-container .puppy {
+    margin-top: 227px;
+    display: block;
+    margin-left: -79px;
+    margin-right: auto;
+    width: 150%;
+}
+
+/*kutya kosár
+.cart-button{
+    position: relative;
+    padding: 10px;
+    width: 200px;
+    height: 60px;
+    border: 0px;
+    
+}
+
+
+/*buy*/
