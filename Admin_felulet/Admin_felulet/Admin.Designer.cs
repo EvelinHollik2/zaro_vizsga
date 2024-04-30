@@ -53,6 +53,7 @@
             this.szallitas.TabIndex = 5;
             this.szallitas.Text = "Szállítás";
             this.szallitas.UseVisualStyleBackColor = true;
+            this.szallitas.Click += new System.EventHandler(this.szallitas_Click);
             // 
             // Felhasznalo
             // 
@@ -62,6 +63,7 @@
             this.Felhasznalo.TabIndex = 7;
             this.Felhasznalo.Text = "Felhasználók";
             this.Felhasznalo.UseVisualStyleBackColor = true;
+            this.Felhasznalo.Click += new System.EventHandler(this.Felhasznalo_Click);
             // 
             // button4
             // 
@@ -71,6 +73,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Termékek";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 

@@ -15,11 +15,11 @@ namespace Admin_felulet
         public int irszam;
         public string telepules;
         public string utca;
-        public string hazszam;
+        public int hazszam;
         public string emelet;
-        public int telefonszam;
+        public string telefonszam;
 
-        public Szallitas(int userid, int irszam, string telepules, string utca, string hazszam, string emelet, int telefonszam)
+        public Szallitas(int userid, int irszam, string telepules, string utca, int hazszam, string emelet, string telefonszam)
         {
             this.userid = userid;
             this.irszam = irszam;
@@ -29,5 +29,10 @@ namespace Admin_felulet
             this.emelet = emelet;
             this.telefonszam = telefonszam;
         }
+        public override string ToString()
+        {
+            return $"ID:{userid} Irányító szám:{irszam} Település:{telepules} Utca:{utca} Házszám:{hazszam} Emelet:{emelet} Telefonszám:{telefonszam}";
+        }
+
     }
 }

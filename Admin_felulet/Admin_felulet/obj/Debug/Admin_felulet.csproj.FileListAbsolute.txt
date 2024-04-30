@@ -42,3 +42,6 @@ C:\xampp\htdocs\ZaroVizsga_kutyamacska\Admin_felulet\Admin_felulet\obj\Debug\Adm
 C:\xampp\htdocs\ZaroVizsga_kutyamacska\Admin_felulet\Admin_felulet\obj\Debug\Admin_felulet.exe
 C:\xampp\htdocs\ZaroVizsga_kutyamacska\Admin_felulet\Admin_felulet\obj\Debug\Admin_felulet.pdb
 C:\xampp\htdocs\ZaroVizsga_kutyamacska\Admin_felulet\Admin_felulet\obj\Debug\Admin_felulet.Rendelesek.resources
+C:\xampp\htdocs\ZaroVizsga_kutyamacska\Admin_felulet\Admin_felulet\obj\Debug\Admin_felulet.Szallitasok.resources
+C:\xampp\htdocs\ZaroVizsga_kutyamacska\Admin_felulet\Admin_felulet\obj\Debug\Admin_felulet.Termekek.resources
+C:\xampp\htdocs\ZaroVizsga_kutyamacska\Admin_felulet\Admin_felulet\obj\Debug\Admin_felulet.Felhasznalok.resources

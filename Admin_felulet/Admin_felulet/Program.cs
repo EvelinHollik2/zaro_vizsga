@@ -13,6 +13,12 @@ namespace Admin_felulet
         public static Admin admin = null;
         public static int userid;
         public static Database db = new Database();
+        public static Rendelesek rendelesek = null;
+        public static Szallitasok szallitasok = null;
+        public static Termekek termekek = null;
+        public static Felhasznalok felhasznalok = null;
+
+
 
         static void Main()
         {
@@ -20,6 +26,8 @@ namespace Admin_felulet
             Application.SetCompatibleTextRenderingDefault(false);
             admin = new Admin();
             Application.Run(new Form1());
+
+            
         }
     }
 }

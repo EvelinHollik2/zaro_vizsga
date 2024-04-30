@@ -29,5 +29,15 @@ namespace Admin_felulet
             listBox_rendeles.Items.Clear();
             listBox_rendeles.Items.AddRange(Program.db.getRendelesek().ToArray());
         }
+
+        private void Rendelesek_Load(object sender, EventArgs e)
+        {
+            updateRendelesLista();
+        }
+
+        private void button_Vissza_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

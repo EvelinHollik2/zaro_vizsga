@@ -16,5 +16,26 @@ namespace Admin_felulet
         {
             InitializeComponent();
         }
+
+        private void button_Vissza_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Termekek_Load(object sender, EventArgs e)
+        {
+            updateTermekLista();
+        }
+
+        private void listBox_Termek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateTermekLista();
+        }
+
+        private void updateTermekLista()
+        {
+            listBox_Termek.Items.Clear();
+            listBox_Termek.Items.AddRange(Program.db.getTermek().ToArray());
+        }
     }
 }

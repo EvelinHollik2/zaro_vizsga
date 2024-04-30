@@ -12,17 +12,21 @@ namespace Admin_felulet
     {
         public int userid;
         public int termekid;
-        public int datum;
-        public int sarab;
+        public DateTime datum;
+        public int darab;
         public int ar;
 
-        public Rendeles(int userid, int termekid, int datum, int sarab, int ar)
+        public Rendeles(int userid, int termekid, DateTime datum, int darab, int ar)
         {
             this.userid = userid;
             this.termekid = termekid;
             this.datum = datum;
-            this.sarab = sarab;
+            this.darab = darab;
             this.ar = ar;
+        }
+        public override string ToString()
+        {
+            return $"ID:{userid} Termék ID:{termekid} rendelési dátum:{datum} darabszám:{darab} Ára:{ar}";
         }
     }
 }
