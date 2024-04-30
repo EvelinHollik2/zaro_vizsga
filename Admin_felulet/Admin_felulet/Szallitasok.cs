@@ -16,5 +16,26 @@ namespace Admin_felulet
         {
             InitializeComponent();
         }
+
+        private void listBox_Szallitas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateSzallitasLista();
+        }
+
+        private void updateSzallitasLista()
+        {
+            listBox_Szallitas.Items.Clear();
+            listBox_Szallitas.Items.AddRange(Program.db.getSzallitas().ToArray());
+        }
+
+        private void Szallitasok_Load(object sender, EventArgs e)
+        {
+            updateSzallitasLista();
+        }
+
+        private void button_Vissza_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -144,6 +144,9 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Felhasznalok.resx">
+      <DependentUpon>Felhasznalok.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +161,12 @@
     </Compile>
     <EmbeddedResource Include="Rendelesek.resx">
       <DependentUpon>Rendelesek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Szallitasok.resx">
+      <DependentUpon>Szallitasok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Termekek.resx">
+      <DependentUpon>Termekek.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

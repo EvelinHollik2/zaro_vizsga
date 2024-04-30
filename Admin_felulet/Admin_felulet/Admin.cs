@@ -24,10 +24,27 @@ namespace Admin_felulet
 
         private void Rendeles_Click(object sender, EventArgs e)
         {
-            if (Program.db.getRendelesek())
-            {
-                Program.Rendelesek.Show();
-            }
+            Program.rendelesek = new Rendelesek();
+            Program.rendelesek.Show();
+            
+        }
+
+        private void szallitas_Click(object sender, EventArgs e)
+        {
+            Program.szallitasok = new Szallitasok();
+            Program.szallitasok.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Program.termekek = new Termekek();
+            Program.termekek.Show();
+        }
+
+        private void Felhasznalo_Click(object sender, EventArgs e)
+        {
+            Program.felhasznalok = new Felhasznalok();
+            Program.felhasznalok.Show();
         }
     }
 }

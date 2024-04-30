@@ -23,5 +23,10 @@ namespace Admin_felulet
             this.email = email;
             this.password = password;
         }
+        public override string ToString()
+        {
+            return $"Felhasználó Id:{userid} Felhasználó név:{username} Email cím:{email} Jelszó:{password}";
+        }
+
     }
 }

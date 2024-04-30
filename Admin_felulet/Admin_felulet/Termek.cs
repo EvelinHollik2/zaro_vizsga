@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Crypto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace Admin_felulet
         }
         public override string ToString()
         {
-            return this.termeknev;
+            return $"Termék Id:{termekid} Termék név:{termeknev} Termék darab:{termekdb} Termék ár:{termekar} Fajta:{fajta} Kollekció:{kollekcio}";
         }
     }
 }
