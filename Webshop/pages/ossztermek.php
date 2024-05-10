@@ -1,4 +1,6 @@
-<div class="row">
+<div class="container">
+    <form action="index.php?menu=kosar" method="POST">
+        <div class="row rendezes">
     <?php
     foreach ($db->Termekek() as $row) {
         $image = null;
@@ -14,20 +16,22 @@
             $image = "./Kepek/a_vasarlas/noimg/noimage.jpg";
         }
         $card = '<div class="card" style="width: 18rem;">
-                    <img src="'.$image.'" class="card-img-top" alt="...">
+                    <img src="' . $image . '" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">' . $row['termeknev'] . '</h5>' .
                 '<p class="card-text">Termék darab: ' . $row['termekdb'] . '</p>' .
                 '<p class="card-text">Termék ár: ' . $row['termekar'] . ' Ft</p>' .
                 '<p class="card-text">Fajta: ' . $row['fajta'] . '</p>' .
-                '<a class="nav-link" href="index.php?menu=kosar"><button>Kosárba</button></a>                
-                    </div>
+                '<input type="checkbox" name="kivalasztva[]" class="kockas" value="' . $row['termekid'] . '">Kiválasztás' .
+                '</div>
                 </div>
             ';
-        
+
         echo $card;
-        
     }
     ?>
 
+        </div>
+            <button type="submit" name="bevitel" value="1" id="megjel" class="btn">Kosár megjelenítése</button>        
+    </form>
 </div>

@@ -66,14 +66,14 @@
   <form class="form" autocomplete="off" novalidate>
     <fieldset>
       <label for="card-number">Kártya szám</label>
-      <input type="num" id="card-number" class="input-cart-number" maxlength="4" />
-      <input type="num" id="card-number-1" class="input-cart-number" maxlength="4" />
-      <input type="num" id="card-number-2" class="input-cart-number" maxlength="4" />
-      <input type="num" id="card-number-3" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number-1" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number-2" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number-3" class="input-cart-number" maxlength="4" />
     </fieldset>
     <fieldset>
       <label for="card-holder">Kártyán szereplő név</label>
-      <input type="text" id="card-holder" />
+      <input type="text" id="card-holder" maxlength="30"/>
     </fieldset>
     <fieldset class="fieldset-expiration">
       <label for="card-expiration-month">Lejárati dátum</label>

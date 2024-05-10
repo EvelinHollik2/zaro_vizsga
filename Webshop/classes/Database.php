@@ -102,7 +102,7 @@ class Database {
             echo 'Error: ' . $e->getMessage();
         }
     }
-
+    
     public function Termekek() {
         $result = $this->db->query("SELECT * FROM `termekek`");
         return $result->fetch_all(MYSQLI_ASSOC);
